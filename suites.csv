@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Nov 14 04:34:14 UTC 2025","Fri Nov 14 04:34:22 UTC 2025","7733","webkit","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""
-"passed","Fri Nov 14 04:34:10 UTC 2025","Fri Nov 14 04:34:13 UTC 2025","2192","firefox","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""
-"passed","Fri Nov 14 04:34:07 UTC 2025","Fri Nov 14 04:34:09 UTC 2025","1928","chromium","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""
+"passed","Fri Nov 14 04:40:04 UTC 2025","Fri Nov 14 04:40:06 UTC 2025","2189","firefox","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""
+"passed","Fri Nov 14 04:40:08 UTC 2025","Fri Nov 14 04:40:14 UTC 2025","6703","webkit","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""
+"passed","Fri Nov 14 04:40:01 UTC 2025","Fri Nov 14 04:40:03 UTC 2025","2015","chromium","specs/userLogin.spec.js","Valid User Login Tests and add to cart a product","","","Valid User Login and add to cart a product",""

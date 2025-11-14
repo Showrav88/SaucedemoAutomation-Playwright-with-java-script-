@@ -1,7 +1,0 @@
-User is able to login with valid username and password
- Randomly selected product: Sauce Labs Backpack
- Product successfully added to cart
- Product name validated in Cart: Sauce Labs Backpack
-✔ Product name validated at Checkout Step Two: Sauce Labs Backpack
- Order completed successfully
- User logged out successfully
