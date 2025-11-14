@@ -23,27 +23,27 @@ await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 const productNames = await page.$$('.inventory_item_name');
 const buttons = await page.$$('button.btn_inventory');
 
-// 🟦 Choose a random product
+// Choose a random product
 const randomIndex = Math.floor(Math.random() * productNames.length);
 const selectedName = await productNames[randomIndex].innerText();
 
-console.log(`👉 Randomly selected product: ${selectedName}`);
+console.log(` Randomly selected product: ${selectedName}`);
 
-// 🟦 Add that product to cart
+//  Add that product to cart
 await buttons[randomIndex].click();
 
 // Verify cart badge = 1
 await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
-console.log('✔ Product successfully added to cart');
+console.log(' Product successfully added to cart');
 
 // Go to Cart
 await addToCart.clickshoppingCartButton();
 await expect(page).toHaveURL('https://www.saucedemo.com/cart.html');
 
-// 🟦 Validate product name in CART
+//  Validate product name in CART
 const cartName = await page.locator('.inventory_item_name').innerText();
 expect(cartName).toBe(selectedName);
-console.log(`✔ Product name validated in Cart: ${cartName}`);
+console.log(` Product name validated in Cart: ${cartName}`);
 
 // Checkout Step 1
 await addToCart.clickCheckoutButton();
@@ -53,7 +53,7 @@ await addToCart.enterZipCodeField(testData.zipcode);
 await addToCart.clickContinueButton();
 await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-two.html');
 
-// 🟦 Validate product name in CHECKOUT STEP TWO
+//  Validate product name in CHECKOUT STEP TWO
 const checkoutName = await page.locator('.inventory_item_name').innerText();
 expect(checkoutName).toBe(selectedName);
 console.log(`✔ Product name validated at Checkout Step Two: ${checkoutName}`);
@@ -62,7 +62,7 @@ console.log(`✔ Product name validated at Checkout Step Two: ${checkoutName}`);
 await addToCart.clickFinishButton();
 await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
 await expect(page.locator('.complete-header')).toHaveText(/Thank you/i);
-console.log('✔ Order completed successfully');
+console.log(' Order completed successfully');
 
 // Back home
 await addToCart.clickBackHomeButton();
@@ -72,7 +72,7 @@ await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
  await addToCart.clickHumburgerMenu();
 await addToCart.clickLogoutButton();
 await expect(page).toHaveURL('https://www.saucedemo.com/');
-console.log('✔ User logged out successfully');
+console.log(' User logged out successfully');
 
 
 
