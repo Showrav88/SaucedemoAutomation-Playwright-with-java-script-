@@ -12,37 +12,41 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      # 1️⃣ Checkout repo
+      #  Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node
+      #  Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 3️⃣ Install dependencies
+      #  Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Install Playwright browsers
+      #  Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # 5️⃣ Clean Allure folders (results + report)
+      #  Clean Allure folders (results + report)
       - name: Clean Allure folders
         run: rm -rf allure-results allure-report
 
-      # 6️⃣ Run Playwright tests across all browsers
+      #  Run Playwright tests
       - name: Run Playwright tests
         run: npm run test
 
-      # 7️⃣ Generate Allure report
-      - name: Generate Allure report
-        run: npm run allure:generate
+      #  Install Allure CLI globally
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline@2.21.0 --save-dev
 
-      # 8️⃣ Upload Allure report as artifact
+      #  Generate Allure report
+      - name: Generate Allure report
+        run: allure generate allure-results --clean -o allure-report
+
+      #  Upload Allure report as artifact
       - name: Upload Allure report
         uses: actions/upload-artifact@v4
         with:
@@ -50,7 +54,7 @@ jobs:
           path: allure-report/
           retention-days: 30
 
-      # 9️⃣ Deploy Allure report to GitHub Pages (overwrite old)
+      # Deploy Allure report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
