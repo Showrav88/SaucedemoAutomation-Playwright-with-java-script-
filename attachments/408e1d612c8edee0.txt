@@ -1,7 +1,0 @@
-User is able to login with valid username and password
- Randomly selected product: Test.allTheThings() T-Shirt (Red)
- Product successfully added to cart
- Product name validated in Cart: Test.allTheThings() T-Shirt (Red)
-✔ Product name validated at Checkout Step Two: Test.allTheThings() T-Shirt (Red)
- Order completed successfully
- User logged out successfully
