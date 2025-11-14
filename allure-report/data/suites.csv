@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2702","Valid User Login and add to cart a product","chromium","Fri Nov 14 08:39:03 BDT 2025","passed","Fri Nov 14 08:39:06 BDT 2025","Valid User Login Tests and add to cart a product","specs\userLogin.spec.js","",""
+"","5105","Valid User Login and add to cart a product","webkit","Fri Nov 14 08:39:03 BDT 2025","passed","Fri Nov 14 08:39:09 BDT 2025","Valid User Login Tests and add to cart a product","specs\userLogin.spec.js","",""
+"","3944","Valid User Login and add to cart a product","firefox","Fri Nov 14 08:39:03 BDT 2025","passed","Fri Nov 14 08:39:07 BDT 2025","Valid User Login Tests and add to cart a product","specs\userLogin.spec.js","",""

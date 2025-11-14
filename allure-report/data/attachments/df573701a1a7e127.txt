@@ -1,0 +1,7 @@
+User is able to login with valid username and password
+👉 Randomly selected product: Sauce Labs Onesie
+✔ Product successfully added to cart
+✔ Product name validated in Cart: Sauce Labs Onesie
+✔ Product name validated at Checkout Step Two: Sauce Labs Onesie
+✔ Order completed successfully
+✔ User logged out successfully
