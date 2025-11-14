@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
@@ -32,7 +32,7 @@ jobs:
 
       # 5️⃣ Clean Allure folders (results + report)
       - name: Clean Allure folders
-        run: npm run allure:clean
+        run: rm -rf allure-results allure-report
 
       # 6️⃣ Run Playwright tests across all browsers
       - name: Run Playwright tests
